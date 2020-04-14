@@ -55,6 +55,7 @@ class Game
   end
 
   def play
+    turn
   end
 end
 #binding.pry
