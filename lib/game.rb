@@ -37,9 +37,9 @@ class Game
   end
 
   def winner
-    if combo = won?
-      @board.cells[combo[0]]
-      #binding.pry
+    if won?
+      combo = won?
+      @winner = @board.cells[combo[0]]
     end
   end
 end
