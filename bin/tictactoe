@@ -14,7 +14,7 @@ end
 
 case players
 when "0"
-    player_1, player_2 = Players::Computer.new("X"), Players::Computer.new("O")
+  player_1, player_2 = Players::Computer.new("X"), Players::Computer.new("O")
 when "1"
   if first == "Player 1"
     player_1, player_2 = Players::Human.new("X"), Players::Computer.new("O")
@@ -22,4 +22,10 @@ when "1"
     player_1, player_2 = Players::Computer.new("X"), Players::Human.new("O")
   end
 when "2"
-    player_1, player_2 = Players::Human.new("X"), Players::Human.new("O")
+  player_1, player_2 = Players::Human.new("X"), Players::Human.new("O")
+end
+
+game = Game.new(player_1, player_2)
+until game.over?
+  game.play?
+end
