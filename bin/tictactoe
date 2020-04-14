@@ -3,21 +3,23 @@
 require_relative '../config/environment'
 
 puts "Welcome to Tic-tac-toe"
+
 puts "What kind of game would you like to play? 0, 1, or 2 players?"
 players = gets.strip
-if players != "0"
+
+if players == "1"
   puts "Who is x? Player 1? or Player 2?"
   first = gets.strip
 end
 
 case players
 when "0"
-  if first == "Player 1"
     player_1, player_2 = Players::Computer.new("X"), Players::Computer.new("O")
 when "1"
   if first == "Player 1"
     player_1, player_2 = Players::Human.new("X"), Players::Computer.new("O")
   else
-    player_1, player_2 = Players::Computer.new("X"),
-
-  
+    player_1, player_2 = Players::Computer.new("X"), Players::Human.new("O")
+  end
+when "2"
+    player_1, player_2 = Players::Human.new("X"), Players::Human.new("O")
