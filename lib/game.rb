@@ -49,6 +49,8 @@ class Game
     if !@board.valid_move?(move)
       turn
     else
+      @board.update(move, player)
+      @board.display
     end
   end
 end
