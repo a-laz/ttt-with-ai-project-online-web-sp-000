@@ -44,6 +44,9 @@ class Game
   end
 
   def turn
+    player = current_player
+    input = gets.strip
+    player.move(input)
   end
 end
 #binding.pry
