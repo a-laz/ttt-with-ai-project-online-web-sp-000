@@ -27,5 +27,5 @@ end
 
 game = Game.new(player_1, player_2)
 until game.over?
-  game.play?
+  game.play
 end
