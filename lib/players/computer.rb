@@ -21,7 +21,7 @@ module Players
         end
         move = [1,2,3,4,5,6,7,8,9].detect{|i| !board.taken(i)} if move == nil
       end
-      move  
+      move
     end
   end
 end
