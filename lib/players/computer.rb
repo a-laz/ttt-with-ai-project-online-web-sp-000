@@ -19,7 +19,7 @@ module Players
             move = c.select{|i| !board.talem(i+1)}.first.to_i.+(1).to_s
           end
         end
-        move = [1,2,3,4,5,6,7,8,9].detect{|i| !board.taken(i)}.first.to_s if move == nil
+        move = [1,2,3,4,5,6,7,8,9].detect{|i| !board.taken(i)}.to_s if move == nil
       end
       move
     end
