@@ -42,5 +42,8 @@ class Game
       #binding.pry
     end
   end
+
+  def turn
+  end
 end
 #binding.pry
