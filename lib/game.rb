@@ -45,7 +45,7 @@ class Game
 
   def turn
     player = current_player
-    player.move(board)
+    input = player.move(board)
   end
 end
 #binding.pry
