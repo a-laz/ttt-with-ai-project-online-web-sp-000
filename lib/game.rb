@@ -53,5 +53,8 @@ class Game
       @board.display
     end
   end
+
+  def play
+  end
 end
 #binding.pry
