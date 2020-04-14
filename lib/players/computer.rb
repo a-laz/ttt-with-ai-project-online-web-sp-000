@@ -15,7 +15,7 @@ module Players
         Game::WIN_COMBINATIONS.detect do |c|
           if c.select{|i| board.position(i+1) == token}.size == 2 && c.any?{|i| board.position(i+1) == " "}
             move = c.select{|i| !board.taken(i+1)}.first.to_i.+(1).to_s
-          elsif c.select{|i| board.position(i+1) != token && board.position{i+1} != " "}.size == 2 && c.any?{|i| board.position(i+1) == " "}
+          elsif c.select{|i| board.position(i+1) != " " && board.position{i+1} != token}.size == 2 && c.any?{|i| board.position(i+1) == " "}
             move = c.select{|i| !board.talem(i+1)}.first.to_i.+(1).to_s
           end
         end
