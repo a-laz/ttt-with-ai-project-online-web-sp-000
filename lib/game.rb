@@ -24,7 +24,7 @@ class Game
   def won?
     WIN_COMBINATIONS.detect do |c|
       @board.cells[c[0]] == @board.cells[c[1]] && @board.cells[c[1]] == @board.cells[c[2]] && @board.taken?(c[0]+1)
-      binding.pry
+      #binding.pry
     end
   end
 
@@ -43,4 +43,4 @@ class Game
     end
   end
 end
-binding.pry
+#binding.pry
